@@ -1,0 +1,160 @@
+/*
+ * Copyright 2017 Google Inc. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+  font-family: monospace;
+  margin: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: black;
+}
+
+div.demo-card {
+  width: 80vw;
+  margin: 20px auto;
+  padding: 16px;
+}
+
+#enter-ar-info {
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enter-ar-btn {
+  color: white;
+  font-weight: 800;
+  padding: 15px 60px;
+  border: 1px solid rgb(77, 75, 75);
+}
+
+body.unsupported #enter-ar-info {
+  display: none;
+}
+
+body.ar #enter-ar-info {
+  display: none;
+}
+
+#unsupported-info {
+  display: none;
+  width: auto;
+  margin: 50px;
+  padding: 20px;
+  background-color: white;
+}
+
+body.unsupported #unsupported-info {
+  display: block;
+}
+
+#info {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  margin: 1em 1em 2em 1em;
+  z-index: 10;
+  display: block;
+  line-height: 2em;
+  text-align: center;
+  display: none;
+  width: 100%;
+}
+
+body.ar #info {
+  display: block;
+}
+
+#info * {
+  color: #fff;
+}
+
+#info span {
+  background-color: rgba(40, 40, 40, 0.4);
+  padding: 0.4em 0.6em;
+  width: 80vw;
+  border-radius: 0.1em;
+}
+
+#stabilization {
+  background-image: url(../public/stabilization.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  z-index: 10;
+  display: none;
+}
+
+body.ar #stabilization {
+  display: block;
+}
+
+body.ar.stabilized #stabilization {
+  display: none;
+}
+
+#wrong-hosting-root {
+  display: none;
+}
+
+#capture-container {
+  min-width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 60px;
+  display: none;
+}
+
+#capture-button {
+  padding: 15px;
+  border-radius: 50%;
+  border: 1px dashed black;
+}
+
+/* #camera-icon {} */
+
+.bxs-camera {
+  font-size: 30px;
+}
+
+#prompt {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  min-height: 100vh;
+  /* margin: 100px; */
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.793);
+  align-items: center;
+}
